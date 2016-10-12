@@ -15,4 +15,5 @@
 //= require react
 //= require components
 //= require react_ujs
+//= require remarkable
 //= require_tree .

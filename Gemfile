@@ -12,6 +12,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'react-rails'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap-sass'
+  gem 'rails-assets-remarkable'
+end
+
 group :development, :test do
   gem 'pry-rails'
 end

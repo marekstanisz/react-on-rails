@@ -85,6 +85,7 @@ var CommentBox = React.createClass({
 
 var CommentList = React.createClass({
   render: function() {
+    console.log(this.props.data);
     var commentNodes = this.props.data.map(function(comment) {
       return (
         <Comment author={comment.author} key={comment.id}>
@@ -92,6 +93,7 @@ var CommentList = React.createClass({
         </Comment>
       );
     });
+
     return (
       <div className="commentList">
         {commentNodes}
@@ -141,7 +143,9 @@ var CommentForm = React.createClass({
   }
 });
 
-ReactDOM.render(
-  <CommentBox url="/api/comments" pollInterval={2000} />,
-  document.getElementById('content')
-);
+$(()=>{
+  ReactDOM.render(
+    <CommentBox url="/api/comments" pollInterval={2000} />,
+    document.getElementById('content')
+  );
+});
